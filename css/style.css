@@ -45,6 +45,18 @@ body {
   width: auto;
 }
 
+.headlinrlogo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 600;
+}
+
+.headlinrlogo img {
+  height: 100px;
+  width: auto;
+}
+
 nav a {
   margin-left: 1.5rem;
   text-decoration: none;
