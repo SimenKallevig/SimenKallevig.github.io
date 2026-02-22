@@ -41,19 +41,19 @@ body {
 }
 
 .logo img {
-  height: 90px;
+  height: 55px;
   width: auto;
 }
 
 .headlinrlogo {
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 0.6rem;
-  font-weight: 600;
+  margin: 2rem 0;            
 }
 
 .headlinrlogo img {
-  height: 500px;
+  height: 360px;
   width: auto;
 }
 
