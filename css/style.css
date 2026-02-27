@@ -1,5 +1,5 @@
 :root {
-  --bg: #0e1117;
+  --bg: #13171f;
   --text: #e6edf3;
   --muted: #9ba3af;
   --accent: #3b82f6;
@@ -69,13 +69,25 @@ nav a.active {
 }
 
 .btn {
-  padding: 0.5rem 1rem;
+  padding: 0.2rem 0.2rem;
   border: 1px solid var(--accent);
   border-radius: 6px;
   color: var(--accent);
 }
 
 .btn.secondary {
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.btnincontainer {
+  padding: 0.5rem 0.5rem;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  color: var(--accent);
+}
+
+.btnincontainer.secondary {
   display: inline-block;
   margin-top: 1rem;
 }
