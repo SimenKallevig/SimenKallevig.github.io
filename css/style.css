@@ -56,6 +56,17 @@ body {
   height: 360px;
   width: auto;
 }
+.Kalltechlogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;            
+}
+
+.Kalltechlogo img {
+  height: 300px;
+  width: auto;
+}
 
 nav a {
   margin-left: 1.5rem;
