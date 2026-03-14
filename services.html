@@ -11,22 +11,40 @@
 
 <header class="navbar">
   <div class="container nav-content">
-    <div class="logo">
+    <a href="index.html" class="logo">
       <img src="assets/Logo-Kalltech.png" alt="KallTech logo">
       <span>KallTech</span>
-    </div>
-    <nav  style="padding: 7px; display: flexbox; align-items: center;">
+    </a>
+    <nav class="nav-links">
       <a href="index.html">Hjem</a>
       <a href="about.html">Om oss</a>
       <a href="services.html" class="active">Tjenester</a>
-      <a href="headlinr.html">Headlinr
-        <img src="assets/Headlinr-logo.png" alt="Headlinr logo" style="height: 27px; vertical-align: middle;">
+      <a href="ourhomeinnorway.html">OurHomeInNorway</a>
+      <a href="headlinr.html" class="headlinr-link">
+        <img src="assets/Headlinr-logo.png" class="headlinr-icon" alt="Headlinr logo">
+        Headlinr
       </a>
-      
-      <a href="contact.html" class="btn" style="vertical-align: middle; ">Kontakt</a>
+      <a href="contact.html" class="btn">Kontakt</a>
     </nav>
+    <div class="menu-button" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </div>
 </header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Hjem</a>
+  <a href="about.html">Om oss</a>
+  <a href="services.html" class="active">Tjenester</a>
+  <a href="ourhomeinnorway.html">OurHomeInNorway</a>
+  <a href="headlinr.html" class="mobile-headlinr">
+    <img src="assets/Headlinr-logo.png" alt="Headlinr logo">
+    Headlinr
+  </a>
+  <a href="contact.html" class="mobile-contact">Kontakt</a>
+</div>
 
 <main class="container page">
   <h1>Tjenester</h1>
@@ -40,6 +58,8 @@
     <a href="about.html" class="btnincontainer secondary">Om oss</a>
   </ul>
 </main>
+
+<script src="assets/site.js"></script>
 
 </body>
 </html>
