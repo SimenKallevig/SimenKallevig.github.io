@@ -9,8 +9,8 @@
   --accent-strong: #4ea1ff;
   --border: rgba(160, 193, 232, 0.16);
   --shadow: 0 18px 50px rgba(3, 10, 24, 0.28);
-  --theme-transition-duration: 2000ms;
-  --page-fade-duration: 500ms;
+  --theme-transition-duration: 1500ms;
+  --page-fade-duration: 800ms;
   --theme-transition-ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -190,6 +190,13 @@ body.page-is-leaving::after {
   width: auto;
   display: block;
   margin: 1rem 0 1.5rem;
+}
+.headlinrlogo3 {
+  height: 150px;
+  width: 150px;
+  display: block;
+  align-items: center;
+  margin: 1rem 0 1rem;
 }
 .Kalltechlogo {
   display: flex;
