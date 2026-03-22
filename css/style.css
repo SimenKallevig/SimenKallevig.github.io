@@ -192,11 +192,10 @@ body.page-is-leaving::after {
   margin: 1rem 0 1.5rem;
 }
 .headlinrlogo3 {
-  height: 150px;
-  width: 150px;
+  height: 112px;
+  width: 112px;
   display: block;
-  align-items: center;
-  margin: 1rem 0 1rem;
+  margin: 0 auto 1rem;
 }
 .Kalltechlogo {
   display: flex;
@@ -329,6 +328,88 @@ a:hover {
 .page {
   position: relative;
   z-index: 1;
+}
+
+.about-page {
+  max-width: 920px;
+  padding-top: 4rem;
+  padding-bottom: 5rem;
+}
+
+.about-hero {
+  margin-bottom: 3rem;
+}
+
+.about-kicker {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.9rem;
+  margin-bottom: 1rem;
+  border-radius: 999px;
+  color: #dceeff;
+  background: rgba(142, 197, 255, 0.12);
+  border: 1px solid rgba(142, 197, 255, 0.16);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.about-hero h1 {
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+  margin-bottom: 1.2rem;
+}
+
+.about-lead {
+  max-width: 60ch;
+  color: #b9c8da;
+  font-size: 1.08rem;
+  line-height: 1.9;
+}
+
+.about-section {
+  padding: 2rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.about-section h2 {
+  margin-bottom: 1rem;
+  font-size: 1.35rem;
+  letter-spacing: -0.02em;
+}
+
+.about-section p {
+  max-width: 68ch;
+  color: #c0cfde;
+  line-height: 1.9;
+}
+
+.about-section p + p {
+  margin-top: 1rem;
+}
+
+.about-inline-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.4rem;
+}
+
+.about-text-link {
+  color: #8ec5ff;
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+}
+
+.about-muted {
+  color: #8fa1b7;
+}
+
+.about-closing {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .services li {
@@ -689,12 +770,23 @@ a:hover {
   margin-top: 2rem;
 }
 
+.headlinr-store-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.headlinr-store-links {
+  justify-content: center;
+}
+
 .store-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.7rem;
-  min-width: 180px;
+  min-width: 198px;
   padding: 1rem 1.35rem;
   border-radius: 999px;
   border: 1px solid rgba(142, 197, 255, 0.2);
@@ -1135,6 +1227,10 @@ a:hover {
   padding: 1.8rem;
 }
 
+.headlinr-feature {
+  min-width: 0;
+}
+
 .headlinr-feature h2,
 .headlinr-stores h2 {
   margin-bottom: 0.75rem;
@@ -1292,6 +1388,7 @@ a:hover {
 
 .our-home-intro,
 .our-home-card,
+.about-page,
 .headlinr-intro,
 .headlinr-feature,
 .headlinr-stores {
@@ -1313,12 +1410,33 @@ a:hover {
   padding: 2rem 1.25rem 4rem;
 }
 
+.about-page {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+.about-hero h1 {
+  font-size: 2.2rem;
+}
+
+.about-inline-links {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .headlinr-nearby {
   grid-template-columns: 1fr;
 }
 
 .headlinr-concert-image {
   height: 180px;
+}
+
+.headlinr-feature,
+.headlinr-stores {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
 }
 
 .headlinr-actions,
@@ -1334,6 +1452,16 @@ a:hover {
 
 .store-button {
   width: 100%;
+  min-width: 0;
+}
+
+.headlinrlogo2 {
+  height: 180px;
+}
+
+.headlinrlogo3 {
+  height: 88px;
+  width: 88px;
 }
 
 .page-transition-enter main,
