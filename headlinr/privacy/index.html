@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="../../headlinrfavicon.ico" />
     <title>Headlinr Privacy Policy</title>
+    <meta
+      name="description"
+      content="Privacy Policy for Headlinr covering what data is collected, how it is used, user rights, and how to contact KallTech."
+    />
     <style>
       :root {
         --bg: #09111b;
@@ -17,7 +21,10 @@
         --shadow: 0 28px 74px rgba(0, 0, 0, 0.34);
       }
 
-      * { box-sizing: border-box; }
+      * {
+        box-sizing: border-box;
+      }
+
       body {
         margin: 0;
         color: var(--text);
@@ -27,8 +34,17 @@
           radial-gradient(circle at top right, rgba(76, 108, 149, 0.17), transparent 26%),
           linear-gradient(180deg, #09111b 0%, #0b121c 42%, #081019 100%);
       }
-      a { color: inherit; }
-      .wrap { max-width: 980px; margin: 0 auto; padding: 28px 20px 46px; }
+
+      a {
+        color: inherit;
+      }
+
+      .wrap {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 28px 20px 46px;
+      }
+
       .topbar {
         display: flex;
         align-items: center;
@@ -37,21 +53,25 @@
         margin-bottom: 22px;
         flex-wrap: wrap;
       }
+
       .brand {
         display: flex;
         align-items: center;
         gap: 14px;
       }
+
       .brand img {
         width: 48px;
         height: 48px;
         object-fit: contain;
       }
+
       .brand-copy strong {
         display: block;
         font-size: 24px;
         letter-spacing: -0.03em;
       }
+
       .brand-copy span {
         display: block;
         margin-top: 4px;
@@ -59,11 +79,19 @@
         font-size: 13px;
         font-weight: 700;
       }
+
+      .return-links {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+
       .return-link {
         color: var(--muted);
         text-decoration: none;
         font-weight: 800;
       }
+
       .hero {
         border: 1px solid var(--border);
         background: linear-gradient(180deg, rgba(18, 28, 42, 0.96), rgba(12, 19, 30, 0.98));
@@ -71,6 +99,7 @@
         padding: 34px 30px;
         box-shadow: var(--shadow);
       }
+
       .eyebrow {
         color: var(--primary);
         font-size: 13px;
@@ -78,73 +107,160 @@
         letter-spacing: 0.18em;
         text-transform: uppercase;
       }
+
       h1 {
-        margin: 14px 0 12px;
+        margin: 14px 0 10px;
         font-size: clamp(38px, 7vw, 64px);
         line-height: 0.96;
         letter-spacing: -0.05em;
       }
+
+      .updated {
+        margin: 0 0 16px;
+        color: rgba(238, 243, 251, 0.72);
+        font-size: 14px;
+        font-weight: 700;
+      }
+
       .intro {
         margin: 0;
         color: var(--muted);
         font-size: 18px;
         line-height: 1.7;
-        max-width: 720px;
+        max-width: 780px;
       }
-      .hero-logos {
-        display: flex;
-        gap: 16px;
-        align-items: center;
+
+      .hero-summary {
         margin-top: 24px;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
       }
-      .hero-logos img {
-        width: 76px;
-        height: 76px;
-        object-fit: contain;
+
+      .summary-card {
+        padding: 18px;
+        border-radius: 22px;
+        background: var(--surface-soft);
+        border: 1px solid rgba(175, 197, 227, 0.12);
       }
+
+      .summary-card strong {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 14px;
+        letter-spacing: -0.02em;
+      }
+
+      .summary-card p,
+      .summary-card a {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.7;
+        font-size: 15px;
+        text-decoration: none;
+      }
+
+      .summary-card a {
+        color: var(--primary);
+        font-weight: 800;
+      }
+
       .content {
         margin-top: 20px;
+        display: grid;
+        grid-template-columns: minmax(0, 1.3fr) minmax(280px, 0.7fr);
+        gap: 20px;
+      }
+
+      .panel {
         border: 1px solid var(--border);
         background: var(--surface);
         border-radius: 28px;
         box-shadow: var(--shadow);
         overflow: hidden;
       }
+
       .section {
         padding: 24px 28px;
         border-top: 1px solid rgba(175, 197, 227, 0.1);
       }
-      .section:first-child { border-top: none; }
+
+      .section:first-child {
+        border-top: none;
+      }
+
       .section h2 {
         margin: 0 0 12px;
-        font-size: 18px;
+        font-size: 20px;
         letter-spacing: -0.03em;
       }
+
       .section p {
         margin: 0;
         color: var(--muted);
         line-height: 1.8;
         font-size: 16px;
       }
-      .downloads {
+
+      .section p + p {
+        margin-top: 12px;
+      }
+
+      .section ul {
+        margin: 14px 0 0;
+        padding-left: 18px;
+        color: var(--muted);
+      }
+
+      .section li {
+        line-height: 1.8;
+        margin: 6px 0;
+      }
+
+      .meta-list {
+        display: grid;
+        gap: 14px;
+      }
+
+      .meta-item {
+        padding: 18px;
+        border-radius: 22px;
+        background: var(--surface-soft);
+        border: 1px solid rgba(175, 197, 227, 0.12);
+      }
+
+      .meta-item span {
+        display: block;
+        margin-bottom: 8px;
+        color: rgba(238, 243, 251, 0.64);
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .meta-item strong,
+      .meta-item a,
+      .meta-item p {
+        margin: 0;
+        font-size: 16px;
+        line-height: 1.7;
+        color: var(--text);
+        text-decoration: none;
+      }
+
+      .meta-item p {
+        color: var(--muted);
+      }
+
+      .pill-links {
         margin-top: 18px;
-        padding: 16px 0 0;
-        display: flex;
-        gap: 12px;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-      }
-      .downloads-note {
-        color: rgba(238, 243, 251, 0.58);
-        font-size: 13px;
-      }
-      .downloads-links {
         display: flex;
         gap: 12px;
         flex-wrap: wrap;
       }
-      .downloads a {
+
+      .pill-links a {
         color: rgba(238, 243, 251, 0.7);
         text-decoration: none;
         font-size: 13px;
@@ -155,13 +271,24 @@
         border: 1px solid rgba(175, 197, 227, 0.12);
       }
 
+      @media (max-width: 860px) {
+        .hero-summary,
+        .content {
+          grid-template-columns: 1fr;
+        }
+      }
+
       @media (max-width: 640px) {
-        .wrap { padding: 18px 14px 34px; }
-        .hero { padding: 28px 22px; }
-        .section { padding: 20px; }
-        .downloads {
-          align-items: flex-start;
-          justify-content: flex-start;
+        .wrap {
+          padding: 18px 14px 34px;
+        }
+
+        .hero {
+          padding: 28px 22px;
+        }
+
+        .section {
+          padding: 20px;
         }
       }
     </style>
@@ -176,73 +303,212 @@
             <span>Privacy Policy</span>
           </div>
         </div>
-        <a class="return-link" href="/headlinr/">Back to Headlinr</a>
+        <div class="return-links">
+          <a class="return-link" href="/headlinr/">Back to Headlinr</a>
+          <a class="return-link" href="/contact/">Contact KallTech</a>
+        </div>
       </div>
 
       <section class="hero">
         <div class="eyebrow">Legal</div>
         <h1>Privacy Policy</h1>
+        <p class="updated">Last updated: April 7, 2026</p>
         <p class="intro">
-          Headlinr is built to support discovery, community and concert culture while treating user data with care.
+          Headlinr respects your privacy and is committed to protecting your personal data. This Privacy Policy explains what information we collect, how we use it, and what rights you have when using the Headlinr app and related services.
         </p>
-        <div class="hero-logos">
-          <img src="../../assets/Headlinr-logo.png" alt="Headlinr" />
-          <img src="../../assets/Logo-Kalltech.png" alt="KallTech" />
+
+        <div class="hero-summary">
+          <div class="summary-card">
+            <strong>Data controller</strong>
+            <p>KallTech operates Headlinr and handles privacy requests related to the service.</p>
+          </div>
+          <div class="summary-card">
+            <strong>Privacy contact</strong>
+            <p><a href="mailto:simen@kalltech.no">simen@kalltech.no</a></p>
+          </div>
+          <div class="summary-card">
+            <strong>Applicable law</strong>
+            <p>These terms are governed by the laws of Norway.</p>
+          </div>
         </div>
       </section>
 
       <section class="content">
-        <div class="section">
-          <h2>Account information</h2>
-          <p>
-            Headlinr stores account information such as name, email address, profile picture and activity created within the app in order to provide the service, show profiles, and synchronize your experience across devices.
-          </p>
-        </div>
-        <div class="section">
-          <h2>User content</h2>
-          <p>
-            Content you choose to publish may be visible to other users of the service.
-          </p>
-        </div>
-        <div class="section">
-          <h2>Data handling</h2>
-          <p>
-            We do not sell personal data or share unnecessary personal information publicly.
-          </p>
-        </div>
-        <div class="section">
-          <h2>Infrastructure</h2>
-          <p>
-            Technical providers such as Firebase, Postgres and other infrastructure services may be used for authentication, storage, analytics and operation of the platform.
-          </p>
-        </div>
-        <div class="section">
-          <h2>Technical data</h2>
-          <p>
-            Basic technical data such as device information, crash logs or usage metrics may be collected in order to improve stability and performance.
-          </p>
-        </div>
-        <div class="section">
-          <h2>Deletion requests</h2>
-          <p>
-            Users may request account deletion or data removal through the app or by contacting the service operator.
-          </p>
-        </div>
-        <div class="section">
-          <h2>Jurisdiction</h2>
-          <p>
-            These terms are governed by the laws of Norway.
-          </p>
-        </div>
-      </section>
+        <div class="panel">
+          <div class="section">
+            <h2>1. Who is responsible for your data</h2>
+            <p>
+              Headlinr is operated by KallTech. If you have questions about privacy or want to request access, correction or deletion of your data, you can contact us at <a href="mailto:simen@kalltech.no">simen@kalltech.no</a>.
+            </p>
+          </div>
 
-      <div class="downloads">
-        <div class="downloads-note">Download Headlinr</div>
-        <div class="downloads-links">
-          <a href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer">App Store</a>
-          <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer">Google Play</a>
+          <div class="section">
+            <h2>2. What data we collect</h2>
+            <p>We may collect and store the following categories of information:</p>
+            <p>
+              <strong>Account information.</strong> This may include your name, email address, profile picture and account identifiers used to create and manage your profile.
+            </p>
+            <p>
+              <strong>Profile and social activity.</strong> This includes information you actively create or share in the app, such as concert cards, comments, likes, follows, saved events, preferred genres, profile details and other activity linked to your account.
+            </p>
+            <p>
+              <strong>Tags and social connections.</strong> If you tag another user in a concert card or other content, that tag is stored so the tagged user can be shown in the content and notified about it. Follow and block relationships are also stored so social features, ranking, discovery and safety features work correctly.
+            </p>
+            <p>
+              <strong>Location-related data.</strong> If you choose to use location-based features, we may use your location to show nearby venues, concerts and recommendations. We aim to use only the level of location access needed to provide these features.
+            </p>
+            <p>
+              <strong>Notification data.</strong> If you enable push notifications, we may store a push token and notification preferences so we can send relevant alerts and updates.
+            </p>
+            <p>
+              <strong>Technical and usage data.</strong> We may collect technical information such as device type, app version, operating system, crash logs and limited usage metrics to improve app stability, performance and security.
+            </p>
+          </div>
+
+          <div class="section">
+            <h2>3. How we use your data</h2>
+            <p>We use personal data to:</p>
+            <ul>
+              <li>create and manage your account</li>
+              <li>show your profile and user-generated content</li>
+              <li>provide social features such as follows, tags and discovery</li>
+              <li>display relevant events, venues and nearby recommendations</li>
+              <li>improve app performance, reliability and safety</li>
+              <li>send notifications you have enabled</li>
+              <li>respond to support requests and account deletion requests</li>
+              <li>prevent abuse, misuse and unauthorized access</li>
+            </ul>
+          </div>
+
+          <div class="section">
+            <h2>4. Legal basis for processing</h2>
+            <p>Where applicable under privacy law, we process personal data based on one or more of the following:</p>
+            <ul>
+              <li>performance of a contract, when data is needed to provide the service</li>
+              <li>consent, where you choose to enable optional features such as notifications or location access</li>
+              <li>legitimate interests, such as improving the service, preventing abuse and operating the platform securely</li>
+              <li>legal obligations, where required by law</li>
+            </ul>
+          </div>
+
+          <div class="section">
+            <h2>5. Sharing of data</h2>
+            <p>We do not sell your personal data.</p>
+            <p>
+              We may share data only where necessary with trusted service providers and infrastructure partners that help us operate Headlinr, such as authentication, hosting, database, storage, notifications, analytics and related platform services. These may include providers such as Firebase, Postgres-based infrastructure and other technical services used to run the app.
+            </p>
+            <p>
+              We may also use third-party music, venue or event-related services where relevant to operate app features.
+            </p>
+          </div>
+
+          <div class="section">
+            <h2>6. Public content</h2>
+            <p>
+              Some information is meant to be visible to other users of the service. This may include your username, profile details you choose to add, concert cards, comments and other content you publish in the app.
+            </p>
+            <p>
+              If you are tagged in content, you may remove your own tag inside the app where supported.
+            </p>
+          </div>
+
+          <div class="section">
+            <h2>7. Data retention</h2>
+            <p>
+              We keep personal data only as long as needed to operate the service, fulfill the purposes described in this policy, resolve disputes, maintain security and comply with legal obligations.
+            </p>
+            <p>
+              If you request deletion of your account, we will delete or anonymize personal data where reasonably possible, except where retention is required for legal, security or fraud-prevention reasons.
+            </p>
+          </div>
+
+          <div class="section">
+            <h2>8. Your rights</h2>
+            <p>Depending on where you live, you may have the right to:</p>
+            <ul>
+              <li>access your personal data</li>
+              <li>correct inaccurate data</li>
+              <li>request deletion of your data</li>
+              <li>request restriction of processing</li>
+              <li>object to certain processing</li>
+              <li>receive a copy of your data</li>
+              <li>withdraw consent for optional features</li>
+            </ul>
+            <p>
+              You may also have the right to lodge a complaint with your local data protection authority.
+            </p>
+          </div>
+
+          <div class="section">
+            <h2>9. Security</h2>
+            <p>
+              We take reasonable technical and organizational measures to protect personal data against unauthorized access, loss, misuse or disclosure. However, no system can be guaranteed to be completely secure.
+            </p>
+          </div>
+
+          <div class="section">
+            <h2>10. International data transfers</h2>
+            <p>
+              Some service providers we use may process data outside Norway or the EEA. Where relevant, we aim to use appropriate safeguards for such transfers in accordance with applicable law.
+            </p>
+          </div>
+
+          <div class="section">
+            <h2>11. Children</h2>
+            <p>
+              Headlinr is not intended for children under the age required by applicable law to use the service without parental consent. We do not knowingly collect personal data from children in violation of applicable law.
+            </p>
+          </div>
+
+          <div class="section">
+            <h2>12. Changes to this Privacy Policy</h2>
+            <p>
+              We may update this Privacy Policy from time to time. If we make important changes, we may notify users through the app or by other appropriate means. The latest version will always apply from the date shown above.
+            </p>
+          </div>
+
+          <div class="section">
+            <h2>13. Contact</h2>
+            <p>
+              If you have questions about this Privacy Policy or want to request deletion, access or correction of your data, contact <a href="mailto:simen@kalltech.no">simen@kalltech.no</a>.
+            </p>
+            <p>These terms are governed by the laws of Norway.</p>
+          </div>
         </div>
-      </div>
+
+        <aside class="panel">
+          <div class="section">
+            <h2>Quick overview</h2>
+            <div class="meta-list">
+              <div class="meta-item">
+                <span>Operator</span>
+                <strong>KallTech</strong>
+              </div>
+              <div class="meta-item">
+                <span>Privacy email</span>
+                <a href="mailto:simen@kalltech.no">simen@kalltech.no</a>
+              </div>
+              <div class="meta-item">
+                <span>Main categories</span>
+                <p>Account details, social activity, tags, location use, notifications, and technical usage data.</p>
+              </div>
+              <div class="meta-item">
+                <span>Your rights</span>
+                <p>Access, correction, deletion, restriction, objection, portability, and consent withdrawal where applicable.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <h2>Useful links</h2>
+            <div class="pill-links">
+              <a href="/headlinr/support/">Support</a>
+              <a href="/headlinr/terms/">Terms of Service</a>
+              <a href="/contact/">Contact KallTech</a>
+            </div>
+          </div>
+        </aside>
+      </section>
     </div>
   </body>
 </html>
