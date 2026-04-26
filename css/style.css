@@ -781,6 +781,13 @@ a:hover {
   justify-content: center;
 }
 
+.headlinr-social-link {
+  margin-top: 0.85rem;
+  text-align: center;
+  color: #b3c4d7;
+  font-size: 0.95rem;
+}
+
 .store-button {
   display: inline-flex;
   align-items: center;
