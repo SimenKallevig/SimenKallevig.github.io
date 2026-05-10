@@ -1266,18 +1266,23 @@ a:hover {
 }
 
 .headlinr-preview-panel {
-  margin-top: 2rem;
+  margin: 2rem auto 0;
+  max-width: 1040px;
   padding: 1.25rem;
   border-radius: 30px;
   border: 1px solid rgba(142, 197, 255, 0.1);
   background: linear-gradient(180deg, rgba(17, 28, 47, 0.92), rgba(9, 16, 30, 0.96));
   box-shadow: 0 28px 60px rgba(2, 8, 21, 0.28);
+  overflow: hidden;
 }
 
 .headlinr-preview-image {
   display: block;
   width: 100%;
+  max-width: 100%;
   height: auto;
+  max-height: 680px;
+  object-fit: contain;
   border-radius: 22px;
 }
 
