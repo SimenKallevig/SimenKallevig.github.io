@@ -188,6 +188,8 @@ body.page-is-leaving::after {
 .headlinrlogo2 {
   height: 290px;
   width: auto;
+  max-width: 100%;
+  object-fit: contain;
   display: block;
   margin: 1rem 0 1.5rem;
 }
@@ -781,6 +783,10 @@ a:hover {
   justify-content: center;
 }
 
+.mobile-top-store-links {
+  display: none;
+}
+
 .headlinr-social-link {
   margin-top: 0.85rem;
   text-align: center;
@@ -1259,6 +1265,22 @@ a:hover {
   gap: 1.4rem;
 }
 
+.headlinr-preview-panel {
+  margin-top: 2rem;
+  padding: 1.25rem;
+  border-radius: 30px;
+  border: 1px solid rgba(142, 197, 255, 0.1);
+  background: linear-gradient(180deg, rgba(17, 28, 47, 0.92), rgba(9, 16, 30, 0.96));
+  box-shadow: 0 28px 60px rgba(2, 8, 21, 0.28);
+}
+
+.headlinr-preview-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 22px;
+}
+
 .headlinr-feature,
 .headlinr-stores {
   padding: 1.8rem;
@@ -1423,6 +1445,10 @@ a:hover {
   grid-template-columns: 1fr;
 }
 
+.headlinr-preview-panel {
+  padding: 1rem;
+}
+
 .our-home-intro,
 .our-home-card,
 .about-page,
@@ -1482,6 +1508,41 @@ a:hover {
   align-items: stretch;
 }
 
+.mobile-top-store-links {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 0.65rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  justify-content: flex-start;
+}
+
+.mobile-top-store-links .store-button {
+  flex: 1 1 0;
+  width: auto;
+  padding: 0.72rem 0.9rem;
+  gap: 0.55rem;
+}
+
+.mobile-top-store-links .store-button img {
+  width: 18px;
+  height: 18px;
+}
+
+.mobile-top-store-links .store-button-stack {
+  align-items: center;
+  text-align: center;
+}
+
+.mobile-top-store-links .store-button-subtitle {
+  display: none;
+}
+
+.headlinr-social-link {
+  margin-top: 0.7rem;
+}
+
 .headlinr-stores {
   grid-column: span 1;
   align-items: stretch;
@@ -1494,6 +1555,8 @@ a:hover {
 
 .headlinrlogo2 {
   height: 180px;
+  width: auto;
+  align-self: flex-start;
 }
 
 .headlinrlogo3 {
