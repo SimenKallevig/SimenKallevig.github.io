@@ -302,6 +302,10 @@ a:hover {
   text-align: center;
 }
 
+.mobile-headlinr-cta {
+  display: none;
+}
+
 .hero h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
@@ -1442,6 +1446,13 @@ a:hover {
   height:24px;
 }
 
+.mobile-menu .mobile-headlinr {
+  background: linear-gradient(135deg, rgba(255, 204, 0, 0.2), rgba(78, 161, 255, 0.14));
+  border-color: rgba(255, 204, 0, 0.22);
+  color: #f4f7fb;
+  box-shadow: 0 18px 32px rgba(1, 8, 20, 0.18);
+}
+
 .headlinr-link img,
 .mobile-headlinr img {
   flex-shrink: 0;
@@ -1484,6 +1495,57 @@ a:hover {
 
 .headlinr-page {
   padding: 2rem 1.25rem 4rem;
+}
+
+.mobile-headlinr-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin: 1.8rem auto 0;
+  padding: 1rem 1.1rem;
+  max-width: 420px;
+  border-radius: 24px;
+  text-align: left;
+  color: #f4f7fb;
+  background:
+    radial-gradient(circle at top right, rgba(255, 204, 0, 0.16), transparent 35%),
+    linear-gradient(135deg, rgba(25, 39, 63, 0.98), rgba(15, 25, 41, 0.98));
+  border: 1px solid rgba(255, 204, 0, 0.2);
+  box-shadow: 0 20px 40px rgba(2, 8, 21, 0.26);
+}
+
+.mobile-headlinr-cta-kicker {
+  display: inline-flex;
+  align-self: flex-start;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(255, 204, 0, 0.12);
+  border: 1px solid rgba(255, 204, 0, 0.18);
+  color: #ffdc67;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.mobile-headlinr-cta-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.mobile-headlinr-cta-title img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.mobile-headlinr-cta-copy {
+  color: #c8d6e5;
+  line-height: 1.55;
 }
 
 .about-page {
