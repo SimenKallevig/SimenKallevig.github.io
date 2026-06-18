@@ -751,6 +751,10 @@ a:hover {
   text-transform: uppercase;
 }
 
+.headlinr-kicker + .headlinr-kicker {
+  margin-left: 0.55rem;
+}
+
 .headlinr-intro h1 {
   font-size: clamp(3rem, 5vw, 5rem);
   line-height: 0.92;
@@ -1286,6 +1290,10 @@ a:hover {
   border-radius: 22px;
 }
 
+.headlinr-preview-panel-mobile {
+  display: none;
+}
+
 .headlinr-feature,
 .headlinr-stores {
   padding: 1.8rem;
@@ -1519,7 +1527,7 @@ a:hover {
   align-items: stretch;
   gap: 0.65rem;
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 1.4rem;
   justify-content: flex-start;
 }
 
@@ -1541,6 +1549,15 @@ a:hover {
 }
 
 .mobile-top-store-links .store-button-subtitle {
+  display: none;
+}
+
+.headlinr-preview-panel-mobile {
+  display: block;
+  margin-top: 0;
+}
+
+.headlinr-preview-panel:not(.headlinr-preview-panel-mobile) {
   display: none;
 }
 
