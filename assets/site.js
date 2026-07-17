@@ -57,7 +57,14 @@
 
     if (redirectUrl) {
       sessionStorage.setItem(headlinrRedirectSessionKey, "1");
-      window.location.assign(redirectUrl);
+
+      if (/Android/i.test(navigator.userAgent || "")) {
+        // Keep Headlinr behind the Play Store entry. Using assign() here can
+        // cause Android in-app browsers/custom tabs to close the browser tab.
+        window.history.pushState({ headlinrStoreRedirect: true }, "", window.location.href);
+      }
+
+      window.location.replace(redirectUrl);
       return;
     }
   }
