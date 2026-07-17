@@ -13,6 +13,7 @@
   var pageFadeDurationMs = parseTimeToMs(pageFadeDuration);
   var headlinrAppStoreUrl = "https://apps.apple.com/us/app/headlinr-live-music-events/id6761029478";
   var headlinrGooglePlayUrl = "https://play.google.com/store/apps/details?id=no.kalltech.headlinr";
+  var headlinrGooglePlayIntentUrl = "intent://details?id=no.kalltech.headlinr#Intent;scheme=market;package=com.android.vending;S.browser_fallback_url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dno.kalltech.headlinr;end";
 
   function parseTimeToMs(value) {
     if (!value) return 2200;
@@ -26,8 +27,8 @@
     return path === "/headlinr" || path === "/headlinr/index.html";
   }
 
-  function isMobileDevice() {
-    return /Android|iPhone|iPad|iPod/i.test(navigator.userAgent || "");
+  function isAppleMobileDevice() {
+    return /iPhone|iPad|iPod/i.test(navigator.userAgent || "");
   }
 
   function getHeadlinrStoreRedirectUrl() {
@@ -35,10 +36,6 @@
 
     if (/iPhone|iPad|iPod/i.test(ua)) {
       return headlinrAppStoreUrl;
-    }
-
-    if (/Android/i.test(ua)) {
-      return headlinrGooglePlayUrl;
     }
 
     return "";
@@ -49,7 +46,7 @@
     var hasBypass = params.has("web") || params.has("no_redirect") || params.has("preview");
     var alreadyRedirected = sessionStorage.getItem(headlinrRedirectSessionKey) === "1";
 
-    return isHeadlinrLandingPage() && isMobileDevice() && !hasBypass && !alreadyRedirected;
+    return isHeadlinrLandingPage() && isAppleMobileDevice() && !hasBypass && !alreadyRedirected;
   }
 
   if (shouldAutoRedirectHeadlinr()) {
@@ -57,16 +54,15 @@
 
     if (redirectUrl) {
       sessionStorage.setItem(headlinrRedirectSessionKey, "1");
-
-      if (/Android/i.test(navigator.userAgent || "")) {
-        // Keep Headlinr behind the Play Store entry. Using assign() here can
-        // cause Android in-app browsers/custom tabs to close the browser tab.
-        window.history.pushState({ headlinrStoreRedirect: true }, "", window.location.href);
-      }
-
       window.location.replace(redirectUrl);
       return;
     }
+  }
+
+  if (isHeadlinrLandingPage() && /Android/i.test(navigator.userAgent || "")) {
+    document.querySelectorAll('a[href="' + headlinrGooglePlayUrl + '"]').forEach(function (link) {
+      link.href = headlinrGooglePlayIntentUrl;
+    });
   }
 
   if (menu && button) {
