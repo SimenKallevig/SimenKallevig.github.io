@@ -57,7 +57,7 @@
 
     if (redirectUrl) {
       sessionStorage.setItem(headlinrRedirectSessionKey, "1");
-      window.location.replace(redirectUrl);
+      window.location.assign(redirectUrl);
       return;
     }
   }
