@@ -1385,6 +1385,68 @@ a:hover {
   }
 }
 
+.hl-stores .hl-web-button {
+  background: linear-gradient(135deg, #ffda38, #ffcc00);
+  border-color: #ffcc00;
+  color: #17130a;
+  font-weight: 700;
+}
+
+.hl-stores .hl-web-button small {
+  color: #493d16;
+  font-weight: 400;
+}
+
+.hl-stores .hl-web-button:hover {
+  background: #ffe36b;
+  border-color: #ffe36b;
+}
+
+.hl-web-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 2.5rem;
+}
+
+.hl-web-intro p + p {
+  margin-top: 1rem;
+}
+
+.hl-web-preview {
+  display: block;
+  overflow: hidden;
+  border: 1px solid #ffcc0038;
+  border-radius: 24px;
+  background: #080c14;
+  box-shadow: 0 24px 60px #0004;
+}
+
+.hl-web-preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hl-web-button:focus-visible,
+.hl-web .hl-button:focus-visible,
+.hl-web-preview:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 5px;
+}
+
+@media (max-width: 900px) {
+  .hl-web-intro {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hl-web-preview { border-radius: 14px; }
+}
+
 /* Mobile Styles */
 @media (max-width:768px){
 

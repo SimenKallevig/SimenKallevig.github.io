@@ -3,7 +3,6 @@
   var menu = document.getElementById("mobileMenu");
   var button = document.querySelector(".menu-button");
   var themeStorageKey = "kalltech-theme";
-  var headlinrRedirectSessionKey = "headlinr-store-redirected";
   var isWarmPage = body.classList.contains("warm-theme-page");
   var currentTheme = isWarmPage ? "warm" : "cool";
   var previousTheme = sessionStorage.getItem(themeStorageKey);
@@ -11,7 +10,6 @@
   var themeDurationMs = parseTimeToMs(themeDuration);
   var pageFadeDuration = getComputedStyle(document.documentElement).getPropertyValue("--page-fade-duration").trim() || "850ms";
   var pageFadeDurationMs = parseTimeToMs(pageFadeDuration);
-  var headlinrAppStoreUrl = "https://apps.apple.com/us/app/headlinr-live-music-events/id6761029478";
   var headlinrGooglePlayUrl = "https://play.google.com/store/apps/details?id=no.kalltech.headlinr";
   var headlinrGooglePlayIntentUrl = "intent://details?id=no.kalltech.headlinr#Intent;scheme=market;package=com.android.vending;S.browser_fallback_url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dno.kalltech.headlinr;end";
 
@@ -25,38 +23,6 @@
   function isHeadlinrLandingPage() {
     var path = window.location.pathname.replace(/\/+$/, "") || "/";
     return path === "/headlinr" || path === "/headlinr/index.html";
-  }
-
-  function isAppleMobileDevice() {
-    return /iPhone|iPad|iPod/i.test(navigator.userAgent || "");
-  }
-
-  function getHeadlinrStoreRedirectUrl() {
-    var ua = navigator.userAgent || "";
-
-    if (/iPhone|iPad|iPod/i.test(ua)) {
-      return headlinrAppStoreUrl;
-    }
-
-    return "";
-  }
-
-  function shouldAutoRedirectHeadlinr() {
-    var params = new URLSearchParams(window.location.search);
-    var hasBypass = params.has("web") || params.has("no_redirect") || params.has("preview");
-    var alreadyRedirected = sessionStorage.getItem(headlinrRedirectSessionKey) === "1";
-
-    return isHeadlinrLandingPage() && isAppleMobileDevice() && !hasBypass && !alreadyRedirected;
-  }
-
-  if (shouldAutoRedirectHeadlinr()) {
-    var redirectUrl = getHeadlinrStoreRedirectUrl();
-
-    if (redirectUrl) {
-      sessionStorage.setItem(headlinrRedirectSessionKey, "1");
-      window.location.replace(redirectUrl);
-      return;
-    }
   }
 
   if (isHeadlinrLandingPage() && /Android/i.test(navigator.userAgent || "")) {
